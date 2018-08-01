@@ -14,9 +14,6 @@ namespace Challenge_3
         concert
     }
 
-
-
-
     public class Event
     {
         //properties
@@ -43,7 +40,7 @@ namespace Challenge_3
 
         public override string ToString()
         {
-            string stringToReturn = $"\n{eventType}\n{eventNumber} people\t{dateEvent.ToShortDateString()}\t ${costPer} each \t ${costTotal} Total Cost";
+            string stringToReturn = $"\n {eventType}\n {eventNumber} people\t{dateEvent.ToShortDateString()}\t ${costPer} each \t ${costTotal} Total Cost";
             return stringToReturn;
         }
     }

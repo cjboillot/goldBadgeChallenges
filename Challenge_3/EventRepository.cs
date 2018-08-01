@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Challenge_3
 {
-    class EventRepository
+    public class EventRepository
     {
         //-- Fields
         public List<Event> _EventTypes = new List<Event>();
@@ -20,7 +20,7 @@ namespace Challenge_3
 
         public int Count()
         {
-            return _EventTypes.Count;
+            return _eventList.Count;
         }
 
         public void PrintList(List<Event> list)
@@ -46,22 +46,19 @@ namespace Challenge_3
             return sum;
         }
 
-        public string TypeSum()
+        public int TypeSum(EventType type)
         {
-            string sumt = " ";
-
-            int golf = 0;
-            int bowling = 0;
-            int amusementPark = 0;
-            int concert = 0;
+            int sum = 0;
 
             foreach (Event sumation in _eventList)
             {
-                if ()
+                if (sumation.eventType == type)
+                {
+                    sum += sumation.costTotal;
+                }
             }
-            return sumt;
+            return sum;
         }
 
     }
 }
-

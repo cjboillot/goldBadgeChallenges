@@ -54,9 +54,10 @@ namespace Challenge_3
                     while (true)
                     {
 
-                       Console.WriteLine("What is the type of Event?");
-                       
-                      
+                        Console.WriteLine("What is the type of Event?  Choose 1 for Golf, 2 for Bowling, 3 for Amusement Park, 4. Concert");
+                        string EventType = Console.ReadLine();
+                        int x = int.Parse(EventType);
+                        EventType eventType = (EventType)x;
 
                         Console.WriteLine("How many people will go to the Event?");
                         int eventNumber = int.Parse(Console.ReadLine());
@@ -66,12 +67,6 @@ namespace Challenge_3
 
                         Console.WriteLine("How much will it cost per person?");
                         int costPer = int.Parse(Console.ReadLine());
-
-                        
-
-
-
-
 
                         Event userEvent = new Event(eventType, eventNumber, dateEvent, costPer);
                         eventRepo.AddEventTypesToList(userEvent);
@@ -90,7 +85,7 @@ namespace Challenge_3
                         {
                             eventRepo.PrintList(eventRepo.getEventsList());
                             Console.ReadLine();
-                            continue;
+                            break;
                         }
                     }
                 }
@@ -106,7 +101,12 @@ namespace Challenge_3
 
                 else if (choice == "4")
                 {
-                    Console.WriteLine();
+                    Console.WriteLine("What type of Event do you want to see the total of?  Choose 1 for Golf, 2 for Bowling, 3 for Amusement Park, 4. Concert");
+                    string _eventType = Console.ReadLine();
+                    int x = int.Parse(_eventType);
+                    EventType eventType = (EventType)x;
+
+                    Console.WriteLine("The total sum of all this type of outing is $" + eventRepo.TypeSum(eventType));
 
                     Console.ReadLine();
                 }
