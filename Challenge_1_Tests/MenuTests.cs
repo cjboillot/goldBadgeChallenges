@@ -21,6 +21,7 @@ namespace Challenge_1_Tests
 
             Assert.AreEqual(Expected, Actual);
         }
+
         [TestMethod]
         public void Food_RemoveItem_CountShouldDecrease()
         {
@@ -35,6 +36,7 @@ namespace Challenge_1_Tests
 
             Assert.AreEqual(Expected, Actual);
         }
+
         [TestMethod]
         public void Food_GetList_ShouldPrintList()
         {

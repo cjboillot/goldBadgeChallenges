@@ -56,7 +56,6 @@ namespace Challenge_1
             }
             Console.WriteLine("\n\n");
         }
-
     }
 }
 

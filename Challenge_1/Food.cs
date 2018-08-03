@@ -33,6 +33,5 @@ namespace Challenge_1
             string stringToReturn = $"{menuItem}\n{menuNumber}\t{menuType}\t{ingredients}\t{price}";
             return stringToReturn;
         }
-        
     }
 }

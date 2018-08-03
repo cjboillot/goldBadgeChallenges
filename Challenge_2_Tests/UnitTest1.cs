@@ -10,7 +10,6 @@ namespace Challenge_2_Tests
     {
         ClaimRepository Repo = new ClaimRepository();
 
-
         // Add Item
         [TestMethod]
         public void Claim_AddItem_CountShouldIncrease()
@@ -27,7 +26,6 @@ namespace Challenge_2_Tests
 
             Assert.AreEqual(Expected, Actual);
         }
-
 
         //Get List
         [TestMethod]
@@ -86,5 +84,4 @@ namespace Challenge_2_Tests
             Assert.AreEqual(Expected, Actual);
         }
     }
-   
 }

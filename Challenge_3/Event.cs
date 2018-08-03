@@ -31,7 +31,6 @@ namespace Challenge_3
             dateEvent = theEventDate;
             costPer = theCostPer;
             costTotal = costPer * eventNumber;
-
         }
 
         public Event()

@@ -64,10 +64,8 @@ namespace Challenge_2
                         Console.WriteLine("When was the claim filed?");
                         DateTime dateClaim = DateTime.Parse(Console.ReadLine());
 
-
                         Claim userClaim = new Claim(claimID, type, description, amount, dateAccident, dateClaim);
                         claimRepo.AddClaimToList(userClaim);
-
 
                         Console.WriteLine("Do you want to add annother claim?");
                         string theAnswer = Console.ReadLine();
@@ -82,8 +80,6 @@ namespace Challenge_2
                             break;
                         }
                     }
-
-
                 }
 
                 else if (choice == "2")
@@ -103,28 +99,24 @@ namespace Challenge_2
                         {
                             continue;
                         }
+
                         else if (theAnswer == "n")
                         {
                             Console.Clear();
                             claimRepo.PrintList(claimRepo.GetClaimsList());
 
                             break;
-
                         }
-                        else goto backToPrompt;
 
+                        else goto backToPrompt;
                     }
                 }
-
-
-
 
                 else if (choice == "3")
                 {
                     claimRepo.PrintList(claimRepo.GetClaimsList());
                     Console.ReadLine();
                 }
-
             }
         }
     }

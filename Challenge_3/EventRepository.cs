@@ -59,6 +59,5 @@ namespace Challenge_3
             }
             return sum;
         }
-
     }
 }

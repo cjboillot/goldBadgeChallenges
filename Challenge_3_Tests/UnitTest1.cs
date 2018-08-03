@@ -97,11 +97,6 @@ namespace Challenge_3_Tests
 
             //assert
             Assert.AreEqual(Expected, Actual);
-
         }
-
-        
-
     }
-
 }

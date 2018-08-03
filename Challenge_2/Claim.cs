@@ -38,6 +38,5 @@ namespace Challenge_2
             return $"{ClaimID}\t{Type}      {Description}      ${Amount}        {DateAccident}          {DateClaim}            {IsValid}\t";
              
         }
-
     }
 }

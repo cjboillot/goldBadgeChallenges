@@ -23,7 +23,6 @@ namespace Challenge_3
             Event AmusementPark = new Event(EventType.amusementPark, 4, e3, 7);
             Event Concert = new Event(EventType.concert, 5, e4, 8);
 
-
             eventRepo.AddEventTypesToList(Golf);
             eventRepo.AddEventTypesToList(Bowling);
             eventRepo.AddEventTypesToList(AmusementPark);
@@ -43,10 +42,8 @@ namespace Challenge_3
 
                 if (choice == "1")
                 {
-                    
                         eventRepo.PrintList(eventRepo.getEventsList());
                         Console.WriteLine("\n");
-
                 }
 
                 if (choice == "2")
@@ -70,8 +67,6 @@ namespace Challenge_3
 
                         Event userEvent = new Event(eventType, eventNumber, dateEvent, costPer);
                         eventRepo.AddEventTypesToList(userEvent);
-
-
 
                         Console.WriteLine("Do you want to add another Event?");
                         string theAnswer = Console.ReadLine();
@@ -97,7 +92,6 @@ namespace Challenge_3
                     Console.WriteLine("The total sum of all outings is $" + eventRepo.AddAllOutings());
                     Console.ReadLine();
                 }
-
 
                 else if (choice == "4")
                 {
